@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./navBar";
 import Student from "./Student";
+import { Switch, Route } from "react-router-dom";
 import "./App.css";
 
 function App() {
@@ -8,7 +9,9 @@ function App() {
     <div className="App">
       <h1>Hello</h1>
       <Navbar />
-      <Student />
+      <Switch>
+        <Route path="/Students" render={() => <Student />} />
+      </Switch>
     </div>
   );
 }
