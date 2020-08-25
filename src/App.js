@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "./navBar";
-import Student from "./Student";
+import Student from "./Students/Student";
 import { Switch, Route } from "react-router-dom";
 import "./App.css";
 
