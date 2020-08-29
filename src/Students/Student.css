@@ -1,0 +1,26 @@
+.student-sect {
+  margin: 3% auto;
+  width: 80%;
+  border: 1px solid black;
+  border-radius: 25px;
+}
+.student-card {
+  margin: auto;
+  width: 80%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  justify-content: space-between;
+  justify-items: center;
+}
+.student-card div {
+  text-align: left;
+  width: 20%;
+}
+/* .student-class {
+  text-align: center;
+  background-color: red;
+} */
+.atten {
+  margin: 3%;
+}
