@@ -9,8 +9,16 @@ const Student = () => {
 
   useEffect(() => {
     // setpeopleArr(peopleArr);
+
     setUpdate(false);
   }, [update]);
+
+  const uppAllNames = () => {
+    let a = peopleArr.map((ele) => {
+      ele.name = ele.name[0].toUpperCase() + ele.name.slice(1);
+      console.log(ele.name);
+    });
+  };
 
   const sortByName = () => {
     let arr = peopleArr;
@@ -27,6 +35,18 @@ const Student = () => {
     setpeopleArr(arr);
     setUpdate(true);
   };
+
+  const doChange = (id) => {
+    peopleArr.forEach((ele) => {
+      if (ele.id === id) {
+        ele.atten = !ele.atten;
+        console.log("Klick", ele.name[0].toUpperCase());
+      }
+    });
+    setUpdate(true);
+  };
+
+  uppAllNames();
   return (
     <div>
       <h1>Students!</h1>
@@ -35,7 +55,7 @@ const Student = () => {
       <button onClick={sortByClass}>by Class</button>
       <div className="student-sect">
         {peopleArr.map((ele, index) => (
-          <StudentCard key={index} props={ele} />
+          <StudentCard key={index} changeAtten={doChange} props={ele} />
         ))}
       </div>
     </div>

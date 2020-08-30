@@ -1,7 +1,10 @@
 import React from "react";
 import "./Student.css";
 
-const StudentCard = (props) => {
+const StudentCard = (props, update) => {
+  const handleChange = (e) => {
+    props.changeAtten(props.props.id);
+  };
   return (
     <div className="student-card">
       {/* {console.log(props)} */}
@@ -13,7 +16,12 @@ const StudentCard = (props) => {
       </div>
       <div className="atten">
         <label htmlFor="attendence">Attendence</label>
-        <input type="checkbox" id="attendence"></input>
+        <input
+          type="checkbox"
+          onChange={handleChange}
+          id="attendence"
+          checked={props.props.atten}
+        />
       </div>
     </div>
   );

@@ -1,7 +1,8 @@
-function person(id, name, cls) {
+function person(id, name, cls, atten = false) {
   this.id = id;
   this.name = name;
   this.cls = cls;
+  this.atten = atten;
 }
 
 const people = [
@@ -9,7 +10,7 @@ const people = [
   new person(1, "jon", "Bjj"),
   new person(2, "tim", "Bjj"),
   new person(3, "trish", "Muaythai"),
-  new person(4, "chris", "Bjj"),
+  new person(4, "chris", "Bjj", true),
   new person(5, "sara", "Muaythai"),
 ];
 
